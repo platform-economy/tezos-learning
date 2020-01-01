@@ -132,6 +132,8 @@ https://cyber.stanford.edu/blockchainconf (find Michelson)
 
 https://github.com/tezoscommunity/faq/wiki/Tezos-Technical-FAQ
 
+https://tezos.gitlab.io/api/rpc.html
+
 ## Module 3 - Smart Contracts I
 
 It is time to write and deploy smart contracts! We will start to code smart contracts with SmartPy in this module.
