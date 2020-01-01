@@ -128,6 +128,8 @@ https://faucet.tzalpha.net/
 
 https://github.com/tezoscommunity/faq/wiki/Tezos-Technical-FAQ#what-is-the-difference-between-implicit-and-originated-accounts
 
+https://cyber.stanford.edu/blockchainconf (find Michelson)
+
 ## Module 3 - Smart Contracts I
 
 It is time to write and deploy smart contracts! We will start to code smart contracts with SmartPy in this module.
