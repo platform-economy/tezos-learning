@@ -71,8 +71,11 @@ There are several other Tezos smart contracts languages. SmartPy is an intuitive
 
 `
 $ wget https://gitlab.com/tezos/tezos/raw/babylonnet/scripts/alphanet.sh
+
 $ mv alphanet.sh babylonnet.sh
+
 $ chmod +x babylonnet.sh
+
 $ ./babylonnet.sh start
 `
 
