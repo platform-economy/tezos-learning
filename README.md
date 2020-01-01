@@ -152,6 +152,12 @@ It is time to write and deploy smart contracts! We will start to code smart cont
 
 https://ojphi.org/ojs/index.php/fm/article/view/548/469;%20accessed:%2004/25/17
 
+https://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
+
+https://repl.it/languages/python3
+
+
+
  ## Module 4 - Clients
                         
 A regular user will not want to use the command line interface, so in this module we will see how you can write clients which can communicate with a Tezos network.
