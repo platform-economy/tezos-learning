@@ -134,6 +134,10 @@ https://github.com/tezoscommunity/faq/wiki/Tezos-Technical-FAQ
 
 https://tezos.gitlab.io/api/rpc.html
 
+https://tzstats.com/
+
+https://mininax.cryptonomic.tech/mainnet
+
 ## Module 3 - Smart Contracts I
 
 It is time to write and deploy smart contracts! We will start to code smart contracts with SmartPy in this module.
