@@ -92,6 +92,12 @@ It is time to write and deploy smart contracts! We will start to code smart cont
 	Introduction
 	Python: Basics, Modules.
 	SmartPy
+	
+	
+	
+### Links
+
+https://ojphi.org/ojs/index.php/fm/article/view/548/469;%20accessed:%2004/25/17
 
  ## Module 4 - Clients
                         
