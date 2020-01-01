@@ -76,8 +76,7 @@ $ mv alphanet.sh babylonnet.sh
 
 $ chmod +x babylonnet.sh
 
-$ ./babylonnet.sh start
-`
+$ ./babylonnet.sh start`
 
 ### Links
 
