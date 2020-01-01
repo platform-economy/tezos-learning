@@ -55,6 +55,14 @@ The accuser is a daemon that monitors all blocks received. It looks for two indi
 
 Such irregularities trigger double-baking and double-endorsing operations that cause the offender to lose a portion of its stake (i.e. a security deposit).
 
+### Inflation Funding and On-Chain Bounties
+
+Tezos has a mechanism that can solve the misalignment of incentives around collective action, also known as the “free-rider problem”. As the Tezos Position Paper states, “the collective action problem arises when multiple parties would benefit from taking an action but none benefit from individually undertaking the action”. Most core developers of blockchains are compensated for their work by foundations, investors, or by token appreciation. What will happen to core development when foundations or investors no longer support developers, or the price of a token does not appreciate?
+
+Tezos presents a solution to sustainably fund protocol development through inflation funding and on-chain bounties. As stated above, the Tezos governance mechanism allows stakeholders to upgrade the protocol through protocol amendments. When a stakeholder proposes a protocol amendment (upgrade), they can attach an invoice to the upgrade that mints new tokens if approved via the governance process. This allows protocol developers to be compensated directly by the protocols they build, not just by an external source that may not be in existence in the future. Remember, even with the blockchain mania of 2017, foundations and other blockchain entities still have a finite amount of resources that will be exhausted eventually!
+
+Minting new tokens for the purpose of funding development is known as “inflation funding.” In addition to funding core protocol development, inflation funding can be used to raise awareness of projects, donate to charities, create on-chain bounties, and fund public goods that are built on top of the protocol (e.g. through a DAO, or “Decentralized Autonomous Organization”).
+
 ## Module 3 - Smart Contracts I
 
 It is time to write and deploy smart contracts! We will start to code smart contracts with SmartPy in this module.
