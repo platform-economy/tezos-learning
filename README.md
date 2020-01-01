@@ -83,6 +83,8 @@ https://smartpy.io/
 
 https://ligolang.org/
 
+[!] https://gitlab.com/camlcase-dev/michelson-tutorial/tree/master
+
 ## Module 3 - Smart Contracts I
 
 It is time to write and deploy smart contracts! We will start to code smart contracts with SmartPy in this module.
