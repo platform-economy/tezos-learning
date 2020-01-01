@@ -69,7 +69,7 @@ Tezos itself is implemented in OCaml. OCaml is a functional programming language
 
 There are several other Tezos smart contracts languages. SmartPy is an intuitive and effective smart contract language and development platform that will allow Python developers to write smart contracts on Tezos. LIGO is a statically typed high-level language that compiles down to Michelson. The syntaxes that are currently supported are PascaLIGO (pascal-like syntax) and CameLIGO (caml-like syntax). ReasonLIGO(reason-like syntax) will be supported soon. Morley/Lorentz is an library to write Michelson contracts in Haskell. Fi is another high-level language that compiles to Michelson and is similar to Javascript and Solidity. Additionally, developers can write Tezos smart contracts in ReasonML.
 
-``sh
+```
 $ wget https://gitlab.com/tezos/tezos/raw/babylonnet/scripts/alphanet.sh
 
 $ mv alphanet.sh babylonnet.sh
@@ -77,8 +77,7 @@ $ mv alphanet.sh babylonnet.sh
 $ chmod +x babylonnet.sh
 
 $ ./babylonnet.sh start
-
-`
+```
 
 ### Links
 
