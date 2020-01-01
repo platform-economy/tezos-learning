@@ -63,6 +63,12 @@ Tezos presents a solution to sustainably fund protocol development through infla
 
 Minting new tokens for the purpose of funding development is known as “inflation funding.” In addition to funding core protocol development, inflation funding can be used to raise awareness of projects, donate to charities, create on-chain bounties, and fund public goods that are built on top of the protocol (e.g. through a DAO, or “Decentralized Autonomous Organization”).
 
+### OCaml, Michelson, SmartPy, LIGO and other languages
+
+Tezos itself is implemented in OCaml. OCaml is a functional programming language used in mission-critical industries that require formal proofs of properties of programs. Michelson is a domain-specific language used to write smart contracts on Tezos. It is stack-based, strongly typed, and designed to facilitate formal verification so developers can more easily prove properties of their smart contracts.
+
+There are several other Tezos smart contracts languages. SmartPy is an intuitive and effective smart contract language and development platform that will allow Python developers to write smart contracts on Tezos. LIGO is a statically typed high-level language that compiles down to Michelson. The syntaxes that are currently supported are PascaLIGO (pascal-like syntax) and CameLIGO (caml-like syntax). ReasonLIGO(reason-like syntax) will be supported soon. Morley/Lorentz is an library to write Michelson contracts in Haskell. Fi is another high-level language that compiles to Michelson and is similar to Javascript and Solidity. Additionally, developers can write Tezos smart contracts in ReasonML.
+
 ## Module 3 - Smart Contracts I
 
 It is time to write and deploy smart contracts! We will start to code smart contracts with SmartPy in this module.
