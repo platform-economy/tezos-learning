@@ -79,6 +79,35 @@ $ chmod +x babylonnet.sh
 $ ./babylonnet.sh start
 ```
 
+### Our first contract
+
+Time to deploy our first Tezos contract!
+
+Create a new file repeater.tz in the same folder as babylonnet.sh and paste:
+
+```
+parameter int;
+storage int;
+code { CAR ;
+       NIL operation ;
+       PAIR };
+```
+into it. Then save it.
+
+This is a repeater contract, which will take an integer as a parameter and return it, in effect saving that number in the storage.
+
+Remember that in Tezos, each contract takes as input one pair of a parameter and storage structure, and then returns, as output, one pair consisting of an operation list and another storage structure. It is stack-based.
+
+Before any contract operation, the stack has been populated by the Tezos environment according to the transaction that spawned the contract. The stack has one level, populated with the input pair. Our code here has 3 instructions:
+
+1) We pop this input pair from the top of the stack, we take the left-hand part of the input pair CAR, i.e. the input parameter, and push that back into the top of the stack. At this stage, the stack is still 1-level deep as the pair was consumed and replaced with the parameter;
+    
+2) We push an empty operation list, NIL operation, to the top of the stack. At this stage, the stack is 2-level deep;
+
+3) We make a pair of both levels of the stack with the operation list on the left, PAIR. Each instruction is working on the stack, e.g. PAIR will take the parameter and operation list from the stack and push a pair. The stack is back to being 1-level deep.
+
+At this stage, the Tezos environment takes the output storage structure, here an int, puts it in storage and executes the operations, if there are any.
+
 ### Links
 
 https://developers.tezos.com/
@@ -94,6 +123,8 @@ https://smartpy.io/
 https://ligolang.org/
 
 [!] https://gitlab.com/camlcase-dev/michelson-tutorial/tree/master
+
+https://faucet.tzalpha.net/
 
 ## Module 3 - Smart Contracts I
 
