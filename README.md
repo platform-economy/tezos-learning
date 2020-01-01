@@ -164,6 +164,16 @@ A regular user will not want to use the command line interface, so in this modul
 
 	Conseil: ConseilPy; ConseilJS
 	Eztz
+	
+As we saw in the previous section, the tezos-node offers a JSON/RPC interface. In this chapter, we want to communicate with the tezos-node without using the tezos-client. The reason is that, at the end of the day, we want to write applications, which we can hand over to the client without more ado.
+
+There are different approaches from which we want to introduce some.
+
+Before beginning with Conseil, we will take a look at eztz. It is a different approach from using ConseilPy and ConseilJS because eztz directly communicates with the tezos-node.
+
+This has of course the advantage that we can go without Conseil, but it also bears disadvantages such as the lack of caching and inflexible requests.
+
+After introducing eztz, we will tackle ConseilPy and later ConseilJS.
 
 ## Module 5 - Project
 
