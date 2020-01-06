@@ -190,6 +190,20 @@ In this module we will take a deeper look into the details of smart contracts on
 	OCaml
 	Michelson
 	Ligo
+	
+### LIGO
+
+Statically-typed, high-level language that compiles down to Michelson. The syntaxes currently supported are PascaLIGO (pascal-like syntax) and CameLIGO (caml-like syntax).
+
+Similar to SmartPy, it is still in development. The idea is to offer a secure and simple tool. In the long term, the plan is to support many different syntaxes.
+
+The installation is easy. Since we have previously worked with Docker, let us also use it for LIGO:
+
+```
+$ curl https://gitlab.com/ligolang/ligo/raw/dev/scripts/installer.sh | bash -s "next"
+```
+
+Although other syntaxes will be supported in the future, here we want to introduce two which are already quite advanced in their development.
 
 ## Module 7 - Ethics & Future Implications
                         
