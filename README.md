@@ -205,6 +205,99 @@ $ curl https://gitlab.com/ligolang/ligo/raw/dev/scripts/installer.sh | bash -s "
 
 Although other syntaxes will be supported in the future, here we want to introduce two which are already quite advanced in their development.
 
+### CameLIGO
+
+Along the way, we have gained experience with smart contracts and OCaml. This will make it easier for us to engage with CameLIGO. Before diving into details, let us again write our prominent repeater contract.
+
+Create repeater.mligo:
+
+```
+type storage = int
+let main (arg : storage) (storageIn : storage) = (([] : operation list), arg)
+```
+
+It looks very similar to OCaml. A difference is that, momentarily, we have to explicitly pass all types.
+
+The rest should look familiar from OCaml and Michelson:
+
+* type storage = int is a type definition,
+
+* main takes two arguments, the parameter arg and the storage storageIn,
+
+* even though we named our input storage instance storageIn, we do nothing with it, it could have been left as _,
+
+* the value is a tuple ([], arg), whereas [] is of the type operation list.
+
+In the terminal, go to the respective folder and execute:
+
+```
+$ ligo dry-run ./repeater.mligo main 5 0
+```
+In this way, we can simulate the execution of a smart contract.
+
+We call the entry point main, and pass the parameter 5 and the storage 0. As expected, we receive:
+
+```
+tuple[   list[]
+         5
+]
+```
+The output fulfils our expectations: We receive a tuple with a list[] and the storage, which corresponds to our parameter 5. We can now compile this smart contract:
+
+```
+$ ligo compile-contract ./repeater.mligo main
+```
+If everything goes as expected, you should get the Michelson output:
+
+```
+{ parameter int ;
+  storage int ;
+  code { DUP ; CAR ; NIL operation ; PAIR ; DIP { DROP } } }
+```
+
+### Storage
+
+Smart contracts have access to and can modify their own storage, the structure that has to be defined as part of the contract definition. The code and the storage type go together. In fact, the storage is just another type, and by convention we name it storage. The type is flexible, but, like the code, cannot be changed once deployed.
+
+For instance, if you have a contract that does not need to save anything to the storage, you would declare:
+
+```
+type storage = unit
+```
+If your contract only needs to save a positive number, you would declare:
+
+```
+type storage = nat
+```
+If your contract only needs to save either a positive number or nothing, you would declare:
+
+```
+type storage = nat option
+```
+Where option is one of the native parameterised variants: type 'a option = None | Some 'a.
+
+If your contract only needs to save a single person, you would declare it with a record:
+
+```
+type storage = {
+    name: string;
+    age: nat;
+    streetAddress: string;
+    tezAddress: address;
+}
+```
+
+If your contract wants to act as a Tezos token ATM, you may declare its storage with:
+
+```
+type storage = {
+    balances: (address, tez) map;
+    totalSupply: tez;
+}
+```
+
+This will create a namespace mapping addresses to balances in tez.
+
 ## Module 7 - Ethics & Future Implications
                         
 The final module covers ethics - how to navigate the conflicting interests and agendas that exist in spite, and at times because, of blockchain technology.
